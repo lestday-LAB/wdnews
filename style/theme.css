@@ -6,7 +6,7 @@
 :root:lang(zh-cn) {
   --p-header-title-content: '维基新闻社';
   --p-header-slogan-content: '';
-  --p-header-logo-background: url('./image/logo-black.png');
+  --p-header-logo-background: url('../../image/logo-black.png');
   --p-top-bar-logo-size: calc(var(--p-header-height) * 0.925);
   --p-font-size-medium: 0.95rem;
   --p-border-radius-medium: 0.75rem;
