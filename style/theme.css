@@ -1,4 +1,4 @@
-@import url("https://oxygennine.github.io/Peroxide/peroxide.css");
+@import url("./peroxide.css");
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css');
 
 :root:lang(cn),
@@ -6,11 +6,11 @@
 :root:lang(zh-cn) {
   --p-header-title-content: '维基新闻社';
   --p-header-slogan-content: '';
-  --p-header-logo-background: url('/../../image/logo-black.png');
+  --p-header-logo-background: url('../../image/logo-black.png');
   --p-top-bar-logo-size: calc(var(--p-header-height) * 0.925);
   --p-font-size-medium: 0.95rem;
   --p-border-radius-medium: 0.75rem;
-  black --p-shadow-2: 0 0 0.45rem 0 var(--p-black-transparent-0-2);
+  --p-shadow-2: 0 0 0.45rem 0 var(--p-black-transparent-0-2);
 }
 
 /* ----------------- 顶栏修复 ----------------- */
