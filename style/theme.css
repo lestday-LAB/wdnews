@@ -1,58 +1,60 @@
 @import url("https://oxygennine.github.io/Peroxide/peroxide.css");
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css');
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
-    --p-header-title-content: '维基新闻社';
-    --p-header-slogan-content: '';
-    --p-header-logo-background: url('image/logo-black.png');
-    --p-top-bar-logo-size: calc(var(--p-header-height) * 0.925);
-    --p-font-size-medium: 0.95rem;
-    --p-border-radius-medium: 0.75rem;black
-    --p-shadow-2: 0 0 0.45rem 0 var(--p-black-transparent-0-2);
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
+  --p-header-title-content: '维基新闻社';
+  --p-header-slogan-content: '';
+  --p-header-logo-background: url('./image/logo-black.png');
+  --p-top-bar-logo-size: calc(var(--p-header-height) * 0.925);
+  --p-font-size-medium: 0.95rem;
+  --p-border-radius-medium: 0.75rem;
+  black --p-shadow-2: 0 0 0.45rem 0 var(--p-black-transparent-0-2);
 }
 
 /* ----------------- 顶栏修复 ----------------- */
 @media screen and (max-width: 768px) {
-    div#content-wrap {
-        margin-top: calc(var(--p-header-height)* 0.25) !important;
-    }
+  div#content-wrap {
+    margin-top: calc(var(--p-header-height)* 0.25) !important;
+  }
 }
 
 /* ----------------- 侧栏常显 ----------------- */
 @media (min-width: 1000px) {
-    :root {
-      --p-sidebar-background-color: transparent;
-    }
+  :root {
+    --p-sidebar-background-color: transparent;
+  }
 
-    div#side-bar {
-        position: relative;
-        left: 1rem;
-        top: 0;
-        transition: none;
-        max-height: unset;
-        height: auto;
-        box-shadow: none;
-        border: none;
-        border-radius: var(--p-border-radius-large);
-        width: calc(var(--p-sidebar-width) - 3rem);
-        z-index: 0;
-        overflow-y: auto;
-        background: transparent;
-    }
+  div#side-bar {
+    position: relative;
+    left: 1rem;
+    top: 0;
+    transition: none;
+    max-height: unset;
+    height: auto;
+    box-shadow: none;
+    border: none;
+    border-radius: var(--p-border-radius-large);
+    width: calc(var(--p-sidebar-width) - 3rem);
+    z-index: 0;
+    overflow-y: auto;
+    background: transparent;
+  }
 
-    div#side-bar:hover {
-        box-shadow: none;
-        left: 1rem;
-    }
+  div#side-bar:hover {
+    box-shadow: none;
+    left: 1rem;
+  }
 
-    div#side-bar::after {
-        display: none;
-    }
+  div#side-bar::after {
+    display: none;
+  }
 
-    div#content-wrap {
-        display: grid;
-        grid-template-columns: var(--p-sidebar-width) 1fr;
-    }
+  div#content-wrap {
+    display: grid;
+    grid-template-columns: var(--p-sidebar-width) 1fr;
+  }
 }
 
 /* ----------------- 页面内容 ----------------- */
@@ -86,12 +88,12 @@
   width: auto;
   margin: 2rem auto;
   border: none;
-    border-top-width: medium;
-    border-top-style: none;
-    border-top-color: currentcolor;
-    border-bottom-width: medium;
-    border-bottom-style: none;
-    border-bottom-color: currentcolor;
+  border-top-width: medium;
+  border-top-style: none;
+  border-top-color: currentcolor;
+  border-bottom-width: medium;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
   border-bottom: solid 0.15rem var(--p-gray-2);
   border-top: solid 0.15rem var(--p-theme-color-dark);
   background-image: linear-gradient(var(--p-gray-2));
@@ -213,8 +215,15 @@
 }
 
 @keyframes collapsible-fadeout {
-  0% {transform: translate(0rem, -1rem); clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);}
-  100% {transform: translate(0rem, 0rem); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  0% {
+    transform: translate(0rem, -1rem);
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+  }
+
+  100% {
+    transform: translate(0rem, 0rem);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .featured-block {
@@ -272,8 +281,16 @@
   padding: 0rem 0.8rem;
 }
 
-.excerpts-wrap .excerpts-chapter[style*="{$"], .excerpts-wrap .excerpts-author[style*="{$"], .excerpts-wrap .excerpts-rate[style*="{$"], .excerpts-wrap .excerpts-comment[style*="{$"], .excerpts-wrap .excerpts-tags[style*="{$"], .excerpts-wrap .excerpts-trans[style*="{$"], .excerpts-interest, .excerpts-author .fa.fa-pencil-square-o {
-  display: none; /* 来自杂志源代码，我严重怀疑这是超古代文明遗址 */
+.excerpts-wrap .excerpts-chapter[style*="{$"],
+.excerpts-wrap .excerpts-author[style*="{$"],
+.excerpts-wrap .excerpts-rate[style*="{$"],
+.excerpts-wrap .excerpts-comment[style*="{$"],
+.excerpts-wrap .excerpts-tags[style*="{$"],
+.excerpts-wrap .excerpts-trans[style*="{$"],
+.excerpts-interest,
+.excerpts-author .fa.fa-pencil-square-o {
+  display: none;
+  /* 来自杂志源代码，我严重怀疑这是超古代文明遗址 */
 }
 
 .excerpts-wrap {
@@ -323,9 +340,9 @@
 .content-block-1 {
   background-color: var(--p-gray-0);
   border: none;
-    border-left-width: medium;
-    border-left-style: none;
-    border-left-color: currentcolor;
+  border-left-width: medium;
+  border-left-style: none;
+  border-left-color: currentcolor;
   border-left: solid 0.5rem var(--p-gray-5);
   box-shadow: var(--p-shadow-2);
   border-radius: 0rem 2rem 0rem 0rem;
@@ -341,6 +358,7 @@
   margin: 1rem auto;
   clip-path: polygon(1.25rem 0, 100% 0, 100% calc(100% - 1.25rem), calc(100% - 1.25rem) 100%, 0 100%, 0 1.25rem);
 }
+
 .content-block-2::before {
   content: '';
   display: block;
