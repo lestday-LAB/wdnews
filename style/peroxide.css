@@ -1,14 +1,17 @@
 /* https://oxygennine.github.io/Peroxide/peroxide.css */
 
-/* === Variables.css === */ 
+/* === Variables.css === */
 /* 
 * Variables.css
  * 定义版式全局变量
 */
 
-@import url("https://fontsapi.zeoseven.com/161/main/result.css"); /* Sarasa Gothic SC */
-@import url("data:text/css,%40font-face%7Bfont-family%3A%22ZSFT-hk%22%3Bsrc%3Aurl(%22https%3A%2F%2Ffontsapi.zeoseven.com%2Fhk%2Fmain.woff2%22)%20format(%22woff2%22)%3Bfont-style%3Anormal%3Bfont-weight%3A100%20900%3Bfont-display%3Aswap%3B%7D"); /* zsft-hk */
-@import url("https://fontsapi.zeoseven.com/285/main/result.css"); /* Noto Serif CJK */
+@import url("https://fontsapi.zeoseven.com/161/main/result.css");
+/* Sarasa Gothic SC */
+@import url("data:text/css,%40font-face%7Bfont-family%3A%22ZSFT-hk%22%3Bsrc%3Aurl(%22https%3A%2F%2Ffontsapi.zeoseven.com%2Fhk%2Fmain.woff2%22)%20format(%22woff2%22)%3Bfont-style%3Anormal%3Bfont-weight%3A100%20900%3Bfont-display%3Aswap%3B%7D");
+/* zsft-hk */
+@import url("https://fontsapi.zeoseven.com/285/main/result.css");
+/* Noto Serif CJK */
 
 :root {
 
@@ -259,7 +262,8 @@
     --p-page-option-bottom-button-border-color: var(--p-gray-2);
     --p-page-option-bottom-button-more-background-color: var(--p-gray-4);
     --p-page-option-bottom-button-more-color: var(--p-gray-1);
-    --p-page-option-bottom-2-margin-top: calc(var(--p-border-radius-medium) * -1.5);;
+    --p-page-option-bottom-2-margin-top: calc(var(--p-border-radius-medium) * -1.5);
+    ;
 
     /* Page Title */
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.25);
@@ -383,12 +387,15 @@
     --p-header-slogan-content: 'Secure / Contain / Protect';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --p-header-title-content: 'SCP基金会';
     --p-header-slogan-content: '控制 / 收容 / 保护';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --p-header-title-content: 'SCP財団';
     --p-header-slogan-content: '確保 / 収容 / 保護';
 }
@@ -409,17 +416,18 @@
     --p-theme-name: '过氧化物 基础版式';
     --p-theme-creator: 'OxygenNine';
 }
- 
-/* === 结束 Variables.css === */ 
- 
-/* === Base.css === */ 
+
+/* === 结束 Variables.css === */
+
+/* === Base.css === */
 /*
  * Base.css
  * 基础样式
  */
 
 #top-bar .ios-cache-issue-notification {
- display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
+    display: none !important;
+    /* 隐藏EN负触发的版式加载失败提示 */
 }
 
 html {
@@ -482,7 +490,7 @@ div#header {
     user-select: none;
     -webkit-user-select: none;
 }
- 
+
 div#header h1 {
     margin: 0;
     grid-area: none;
@@ -492,7 +500,7 @@ div#header h1 {
     left: calc(var(--p-header-height)* 0.05);
     position: relative;
 }
- 
+
 div#header h1 a {
     display: block;
     position: relative;
@@ -500,7 +508,7 @@ div#header h1 a {
     height: var(--p-header-height);
     display: contents;
 }
- 
+
 div#header h1 a span {
     font-size: 0;
     grid-area: title;
@@ -510,7 +518,7 @@ div#header h1 a span {
     justify-content: center;
     height: var(--p-header-height);
 }
- 
+
 div#header h2 {
     margin: 0;
     padding: 0;
@@ -520,7 +528,7 @@ div#header h2 {
     width: calc(100% - 3rem);
     text-align: left;
 }
- 
+
 div#header h2 span {
     font-size: 0;
 }
@@ -535,7 +543,7 @@ div#header h2 {
     position: relative;
     top: calc(var(--p-header-height)* 0.35);
 }
- 
+
 div#header h1 a span::after {
     content: var(--p-header-slogan-content);
     font-size: var(--p-top-bar-slogan-font-size) !important;
@@ -565,11 +573,11 @@ div#header h1 a::before {
     margin-left: var(--p-top-bar-logo-element-margin-left);
     filter: invert(var(--p-header-logo-invert));
 }
- 
+
 div#header h1 a:hover {
     background: transparent;
 }
- 
+
 div#header h1 a span::before {
     content: var(--p-header-title-content);
     font-size: var(--p-top-bar-title-font-size) !important;
@@ -582,13 +590,13 @@ div#header h1 a span::before {
     width: max-content;
     word-break: keep-all;
 }
- 
+
 div#header a:hover {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 /* Login Status */
- 
+
 div#login-status {
     position: relative;
     right: 0px;
@@ -605,25 +613,25 @@ div#login-status {
     justify-content: center;
     z-index: 102;
 }
- 
+
 div#header #login-status .printuser {
     font-size: 0 !important;
     grid-area: none;
     z-index: 25;
     position: relative;
 }
- 
+
 div#header .printuser a {
     position: relative;
     z-index: 22;
     display: block;
 }
- 
+
 div#login-status a#my-account {
     display: none;
 }
- 
-div#login-status>a[href="https://www.wikidot.com/account/messages"] {
+
+div#login-status > a[href="https://www.wikidot.com/account/messages"] {
     position: absolute;
     background-color: var(--p-warning-color);
     color: transparent;
@@ -634,7 +642,7 @@ div#login-status>a[href="https://www.wikidot.com/account/messages"] {
     transform: translateX(calc(var(--p-header-height)* 0.3)) translateY(calc(var(--p-header-height)* 0.3));
     z-index: 100;
 }
- 
+
 div#login-status img.small {
     width: calc(var(--p-header-height)* 0.55);
     height: calc(var(--p-header-height)* 0.55);
@@ -661,19 +669,20 @@ div#login-status a.login-status-sign-in.btn.btn-primary[onclick*="WIKIDOT.page.l
     transform: rotate(15deg);
 }
 
-div#header a.login-status-create-account.btn, a.login-status-create-account.btn~span {
+div#header a.login-status-create-account.btn,
+a.login-status-create-account.btn ~ span {
     display: none;
 }
 
 div#login-status:hover img.small {
     transform: rotate(-15deg);
 }
- 
-div#header .printuser>a {
+
+div#header .printuser > a {
     margin-right: 0px;
     background-color: transparent;
 }
- 
+
 #account-topbutton {
     display: none;
 }
@@ -705,7 +714,8 @@ div#login-status div#account-options:has(a:is(:focus, :focus-visible)) {
     transform: translateX(calc(var(--p-header-height)* 0.15)) translateY(calc(var(--p-header-height)* 1.65));
 }
 
-div#account-options ul, div#account-options li {
+div#account-options ul,
+div#account-options li {
     display: contents;
 }
 
@@ -724,7 +734,7 @@ div#account-options a:hover {
     background-color: transparent;
     font-weight: bold;
 }
- 
+
 div#login-status:hover div#account-options {
     opacity: 1;
     visibility: visible;
@@ -742,21 +752,21 @@ div#header #search-top-box {
     height: calc(var(--p-header-height));
     display: block;
 }
- 
+
 div#header #search-top-box input.empty {
     display: none;
 }
- 
+
 form#search-top-box-form {
     width: calc(var(--p-header-height));
     right: 0;
     height: calc(var(--p-header-height));
 }
- 
+
 div#header #search-top-box input#search-top-box-input {
     display: none;
 }
- 
+
 div#header #search-top-box input.button {
     padding: 0;
     margin: 0 !important;
@@ -774,18 +784,18 @@ div#header #search-top-box input.button {
     mask: var(--p-icon-search) center / 40% no-repeat;
     transition: background-color var(--p-animation-duration-short);
 }
- 
+
 div#header #search-top-box input.button:hover {
     cursor: pointer;
     background-color: var(--p-top-bar-search-hover-color);
 }
- 
+
 /* Top Bar */
- 
+
 div#top-bar {
     font-family: var(--p-font-sans-serif);
 }
- 
+
 div#header div#top-bar {
     position: relative;
     right: -1rem;
@@ -793,11 +803,14 @@ div#header div#top-bar {
     z-index: 100;
     display: contents;
 }
- 
-div#header #top-bar a, div#header #top-bar a:hover, div#header #top-bar a:focus, div#header #top-bar a:focus-visible {
+
+div#header #top-bar a,
+div#header #top-bar a:hover,
+div#header #top-bar a:focus,
+div#header #top-bar a:focus-visible {
     background-color: transparent;
 }
- 
+
 div#header .top-bar {
     display: grid;
     grid-area: topbar;
@@ -806,7 +819,7 @@ div#header .top-bar {
     justify-content: start;
     margin-left: calc(var(--p-header-height)* 0.2);
 }
- 
+
 div#header .mobile-top-bar {
     display: none;
 }
@@ -814,8 +827,8 @@ div#header .mobile-top-bar {
 div#top-bar ul li a {
     max-height: unset;
 }
- 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
+
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li {
     list-style: none;
     float: left;
     margin: 0rem 0rem;
@@ -823,8 +836,8 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
     height: var(--p-header-height);
     line-height: var(--p-header-height);
 }
- 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
+
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > a {
     text-align: center;
     display: inline-flex;
     flex-direction: column;
@@ -841,11 +854,11 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
     transition: box-shadow calc(var(--p-animation-duration-short) * 2), color var(--p-animation-duration-short);
 }
 
-div#header #top-bar :is(.mobile-top-bar)>ul>li>a {
+div#header #top-bar :is(.mobile-top-bar) > ul > li > a {
     font-size: var(--p-mobile-top-bar-font-size);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a::after {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > a::after {
     content: '';
     position: relative;
     width: 0rem;
@@ -856,11 +869,11 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a::after {
     transition: width var(--p-animation-duration-short);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>a::after {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li.sfhover > a::after {
     width: min(2rem, 100%);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul {
     position: absolute;
     opacity: 0;
     transition: opacity var(--p-animation-duration-short), transform var(--p-animation-duration-short);
@@ -868,7 +881,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul {
     pointer-events: none;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li ul {
     background-color: var(--p-top-bar-background-color);
     backdrop-filter: var(--p-top-bar-backdrop-filter);
     -webkit-backdrop-filter: var(--p-top-bar-backdrop-filter);
@@ -885,12 +898,13 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li ul {
     overflow-y: auto; */
 }
 
-div#header #top-bar :is(.mobile-top-bar,.top-bar)>ul>li ul:not(:has(ul)) { /* 如果没有二级菜单，则设置最大高度；否则二级菜单会被overflow-x掉 */
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li ul:not(:has(ul)) {
+    /* 如果没有二级菜单，则设置最大高度；否则二级菜单会被overflow-x掉 */
     max-height: 90vh;
     overflow-y: auto;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul a {
     background-color: transparent;
     color: var(--p-top-bar-menu-link-color);
     font-size: var(--p-font-size-small);
@@ -901,14 +915,14 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a {
     transition: color var(--p-animation-duration-short);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a:hover {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul a:hover {
     color: var(--p-top-bar-menu-link-hover-color);
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>ul, 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a:is(:focus, :focus-visible)+ul, 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul:has(a:is(:focus, :focus-visible)) {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li.sfhover > ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > a:is(:focus, :focus-visible) + ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(0rem, 0rem);
@@ -916,7 +930,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul:has(a:is(:focus, :fo
 
 /* 折叠列表 */
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > ul {
     position: absolute;
     opacity: 0;
     visibility: visible;
@@ -930,7 +944,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul {
     overflow-y: visible;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul::before {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > ul::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -944,30 +958,30 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul::before {
     border-right-color: var(--p-top-bar-submenu-background-color);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul a {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > ul a {
     color: var(--p-top-bar-submenu-link-color);
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul a:hover {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > ul a:hover {
     color: var(--p-top-bar-submenu-link-hover-color);
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:hover>ul,
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>a:is(:focus, :focus-visible)+ul, 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul:has(a:is(:focus, :focus-visible)) {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li:hover > ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > a:is(:focus, :focus-visible) + ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li > ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(6rem, calc(-50% - 0.85rem));
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:has(ul)>a {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li:has(ul) > a {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:has(ul)>a::after {
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > ul > li > ul > li:has(ul) > a::after {
     content: '';
     mask-image: var(--p-icon-topbar-more);
     mask-size: contain;
@@ -977,11 +991,12 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:has(ul)>a::after 
     background-color: var(--p-gray-4);
     line-height: calc(var(--p-font-size-small) * 1.75);
 }
- 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
-    display: none; /* For JP Sandbox */
+
+div#header #top-bar :is(.mobile-top-bar, .top-bar) > br {
+    display: none;
+    /* For JP Sandbox */
 }
- 
+
 
 
 @media screen and (max-width: 768px) {
@@ -1003,18 +1018,18 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         z-index: 100;
     }
 
-    div#header #top-bar .mobile-top-bar>ul,
-    div#header #top-bar .mobile-top-bar>ul>li,
-    div#header #top-bar .mobile-top-bar > ul>li>ul>li {
+    div#header #top-bar .mobile-top-bar > ul,
+    div#header #top-bar .mobile-top-bar > ul > li,
+    div#header #top-bar .mobile-top-bar > ul > li > ul > li {
         display: contents;
     }
 
-    div#header #top-bar .mobile-top-bar>ul>li>a {
+    div#header #top-bar .mobile-top-bar > ul > li > a {
         width: 100%;
         flex-grow: 1;
     }
 
-    div#header #top-bar .mobile-top-bar>ul>li>ul {
+    div#header #top-bar .mobile-top-bar > ul > li > ul {
         height: auto;
         display: grid;
         max-height: 60vh;
@@ -1030,7 +1045,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         grid-template-columns: 1fr 1fr;
     }
 
-    div#header #top-bar .mobile-top-bar > ul>li>ul>li a {
+    div#header #top-bar .mobile-top-bar > ul > li > ul > li a {
         width: calc(100% - 1.5rem);
         padding: 0.15rem 0.75rem;
         line-height: calc(var(--p-font-size-small) * 1.75);
@@ -1038,7 +1053,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
 
     /* 折叠列表 */
 
-    div#header #top-bar .mobile-top-bar > ul>li>ul>li>ul {
+    div#header #top-bar .mobile-top-bar > ul > li > ul > li > ul {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -1047,11 +1062,11 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         height: 100%;
     }
 
-    div#header #top-bar .mobile-top-bar > ul>li>ul>li>ul::before {
+    div#header #top-bar .mobile-top-bar > ul > li > ul > li > ul::before {
         display: none;
     }
 
-    div#header #top-bar .mobile-top-bar > ul>li>ul>li:hover>ul {
+    div#header #top-bar .mobile-top-bar > ul > li > ul > li:hover > ul {
         transform: translate(6rem, 0) !important;
     }
 
@@ -1062,9 +1077,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         direction: ltr !important;
         top: calc(var(--p-header-height)* -2);
         grid-template-areas:
-        'menu logo title title search'
-        'menu logo title title user'
-        'menu topbar topbar topbar topbar';
+            'menu logo title title search'
+            'menu logo title title user'
+            'menu topbar topbar topbar topbar';
         grid-template-columns: var(--p-header-height) 0fr 1fr 0fr;
         grid-template-rows: auto auto var(--p-header-height);
         align-content: space-between;
@@ -1074,7 +1089,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         width: auto;
         z-index: 100;
     }
- 
+
     div#header h1 a::before {
         height: calc(var(--p-header-height)* 1.25);
         width: calc(var(--p-header-height)* 1.25);
@@ -1083,14 +1098,14 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         grid-area: logo;
         margin-left: calc(var(--p-header-height) * 0.05);
     }
- 
+
     div#header h1 a span {
         justify-content: center;
         height: var(--p-header-height);
         transform: translateX(calc(var(--p-header-height)* -0.25));
         padding: calc(var(--p-header-height)* 0.5) calc(var(--p-header-height)* 0.4);
     }
- 
+
     div#header h1 a span::before {
         font-size: calc(var(--p-header-height) * 0.55) !important;
         max-width: 12rem;
@@ -1098,13 +1113,13 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         line-height: calc(var(--p-header-height) * 0.55) !important;
         padding-bottom: 0.3rem;
     }
- 
+
     div#header h1 a span::after {
         font-size: calc(var(--p-header-height)* 0.3) !important;
         bottom: calc(var(--p-header-height)* 0.115 + 0.125rem);
     }
 
-   div#content-wrap {
+    div#content-wrap {
         margin-top: calc(var(--p-header-height)* 0.25);
     }
 
@@ -1198,12 +1213,11 @@ div#side-bar .side-block {
     text-align: left;
 }
 
-:where(div#side-bar .side-block.newcomer > .heading:first-child, 
-        div#side-bar .side-block a[href="/"],
-        div#side-bar .side-block.resources > .heading:first-child,
-        div#side-bar .side-block.admin a.collapsible-block-link,
-        div#side-bar .side-block.media > .heading:first-child
-        )::before {
+:where(div#side-bar .side-block.newcomer > .heading:first-child,
+    div#side-bar .side-block a[href="/"],
+    div#side-bar .side-block.resources > .heading:first-child,
+    div#side-bar .side-block.admin a.collapsible-block-link,
+    div#side-bar .side-block.media > .heading:first-child)::before {
     content: '';
     display: inline-block;
     width: 1rem;
@@ -1223,6 +1237,7 @@ div#side-bar .side-block.resources > .heading:first-child::before {
 div#side-bar .side-block.media > .heading:first-child::before {
     mask: var(--p-icon-media);
 }
+
 div#side-bar .side-block a[href="/"]::before {
     mask: var(--p-icon-home);
 }
@@ -1231,7 +1246,8 @@ div#side-bar .side-block.admin a.collapsible-block-link::before {
     mask: var(--p-icon-admin);
 }
 
-div#side-bar .side-block .heading, div#side-bar .side-block a[href="/"] {
+div#side-bar .side-block .heading,
+div#side-bar .side-block a[href="/"] {
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: var(--p-sideblock-border-bottom);
@@ -1245,7 +1261,9 @@ div#side-bar div.menu-item a {
     font-weight: normal;
 }
 
-div#side-bar .side-block .heading p, div#side-bar .side-block a[href="/"], div#side-bar .side-block .collapsible-block-link {
+div#side-bar .side-block .heading p,
+div#side-bar .side-block a[href="/"],
+div#side-bar .side-block .collapsible-block-link {
     margin: 0;
     font-size: var(--p-font-size-large);
     font-weight: 700;
@@ -1253,7 +1271,8 @@ div#side-bar .side-block .heading p, div#side-bar .side-block a[href="/"], div#s
     text-align: left;
 }
 
-div#side-bar .side-block .menu-item, div#side-bar .side-block .collapsible-block-link {
+div#side-bar .side-block .menu-item,
+div#side-bar .side-block .collapsible-block-link {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -1332,12 +1351,14 @@ div#main-content .meta-title p {
     display: contents;
 }
 
-div#breadcrumbs, .pseudocrumbs {
+div#breadcrumbs,
+.pseudocrumbs {
     margin: 1rem auto;
     width: var(--p-out-page-content-max-width);
 }
 
-div#main-content #page-title, div#main-content .meta-title {
+div#main-content #page-title,
+div#main-content .meta-title {
     font-size: var(--p-page-title-font-size);
     color: var(--p-page-title-color);
     font-weight: bold;
@@ -1370,12 +1391,7 @@ div#main-content .page-tags {
 
 div#page-content {
     display: grid;
-    grid-template-columns:   [fullwidth-start] var(--p-main-side-margin) 
-                             [extrude-start] var(--p-main-extrude-margin) 
-                             [content-start] minmax(0, var(--p-main-content-width)) 
-                             [content-end] var(--p-main-extrude-margin) 
-                             [extrude-end] var(--p-main-side-margin) 
-                             [fullwidth-end];
+    grid-template-columns: [fullwidth-start] var(--p-main-side-margin) [extrude-start] var(--p-main-extrude-margin) [content-start] minmax(0, var(--p-main-content-width)) [content-end] var(--p-main-extrude-margin) [extrude-end] var(--p-main-side-margin) [fullwidth-end];
     justify-items: center;
 }
 
@@ -1504,7 +1520,8 @@ div#main-content #page-options-container {
     width: min(90vw, calc(var(--p-main-content-max-width) - 8rem));
 }
 
-div#main-content #page-info, div#main-content .page-watch-options {
+div#main-content #page-info,
+div#main-content .page-watch-options {
     font-size: var(--p-font-size-xxsmall);
     padding: 0.5rem 1rem;
     font-family: var(--p-font-monospace);
@@ -1512,7 +1529,8 @@ div#main-content #page-info, div#main-content .page-watch-options {
 
 /* Page Options Bottom */
 
-div#main-content #page-options-bottom, div#main-content #page-options-bottom-2 {
+div#main-content #page-options-bottom,
+div#main-content #page-options-bottom-2 {
     margin: 0rem auto;
     width: min(90vw, calc(var(--p-main-content-max-width) - 8rem));
     display: flex;
@@ -1526,7 +1544,8 @@ div#main-content div#page-options-bottom-2 {
     margin-top: var(--p-page-option-bottom-2-margin-top);
 }
 
-div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
+div#main-content #page-options-bottom > a,
+div#main-content #page-options-bottom-2 > a {
     margin: 0rem !important;
     margin-bottom: 0.5rem !important;
     display: inline-flex;
@@ -1566,7 +1585,7 @@ div#page-options-bottom-2 > a#delete-button:hover {
     box-shadow: inset 0rem -0.15rem 0rem var(--p-warning-color);
 }
 
-:is(div#page-options-bottom > a, div#page-options-bottom-2 > a ):hover {
+:is(div#page-options-bottom > a, div#page-options-bottom-2 > a):hover {
     text-decoration: none;
     font-weight: bold;
     box-shadow: inset 0rem -0.15rem 0rem var(--p-page-option-bottom-button-border-color);
@@ -1590,12 +1609,8 @@ div#action-area {
     --p-gray-6: var(--p-white);
     --p-gray-7: var(--p-white);
     background: var(--p-gray-1);
-    grid-template-columns:   [fullwidth-start] var(--p-main-side-margin) 
-                            [extrude-start] var(--p-main-extrude-margin) 
-                            [content-start] minmax(0, var(--p-main-content-width)) 
-                            [content-end] var(--p-main-extrude-margin) 
-                            [extrude-end] var(--p-main-side-margin) 
-                            [fullwidth-end];    justify-items: center;
+    grid-template-columns: [fullwidth-start] var(--p-main-side-margin) [extrude-start] var(--p-main-extrude-margin) [content-start] minmax(0, var(--p-main-content-width)) [content-end] var(--p-main-extrude-margin) [extrude-end] var(--p-main-side-margin) [fullwidth-end];
+    justify-items: center;
     color: var(--p-gray-5);
     border-bottom: solid 0.1rem var(--p-gray-2);
 }
@@ -1617,7 +1632,8 @@ div#action-area > * {
     color: var(--p-gray-4);
 }
 
-#action-area > h1::before, #action-area > h1::after {
+#action-area > h1::before,
+#action-area > h1::after {
     content: '';
     display: block;
     width: auto;
@@ -1698,7 +1714,7 @@ textarea {
 }
 
 :is(#action-area, #new-post-form, #new-thread-form) :is(textarea:focus, textarea:focus-visible,
-input[type="text"]:focus, input[type="text"]:focus-visible) {
+    input[type="text"]:focus, input[type="text"]:focus-visible) {
     outline: solid 0.15rem var(--p-theme-color-light);
 }
 
@@ -1763,8 +1779,9 @@ p:has(a[onclick*="PageRateModule.listeners.showWho"]) {
     text-align: center;
 }
 
-#action-area .btn:not(.rateup, .ratedown, .cancel), 
-a[onclick*="PageRateModule.listeners.showWho"], /* 如果换成wj了，就改成 #action-area:has(#who-rated-page-area) > a+h1+p+div+p > a */
+#action-area .btn:not(.rateup, .ratedown, .cancel),
+a[onclick*="PageRateModule.listeners.showWho"],
+/* 如果换成wj了，就改成 #action-area:has(#who-rated-page-area) > a+h1+p+div+p > a */
 a.button {
     padding: 0.5rem 0.75rem;
     font-size: var(--p-font-size-medium);
@@ -1780,7 +1797,7 @@ a.button {
     border-radius: var(--p-border-radius-medium);
 }
 
-#action-area .btn:not(.rateup, .ratedown, .cancel):hover, 
+#action-area .btn:not(.rateup, .ratedown, .cancel):hover,
 a[onclick*="PageRateModule.listeners.showWho"]:hover,
 a.button:hover {
     background-color: var(--p-gray-3);
@@ -2279,24 +2296,24 @@ table.page-files .highlight .options {
         grid-column: fullwidth;
         padding: 0 1rem;
     }
-    
+
     table.page-files tbody tr {
         grid-template-columns: 1fr auto;
         gap: 0.25rem 0.5rem;
     }
-    
+
     table.page-files tbody tr td:nth-child(1) {
         grid-column: 1 / -1;
     }
-    
+
     table.page-files tbody tr td:nth-child(2) {
         grid-column: 1;
     }
-    
+
     table.page-files tbody tr td:nth-child(3) {
         grid-column: 2;
     }
-    
+
     table.page-files tbody tr td:last-child {
         grid-column: 1 / -1;
         justify-content: flex-end;
@@ -2355,14 +2372,15 @@ div#st-action-area {
     flex-basis: 5rem;
 }
 
-table.form.grid td, table.form.grid th {
+table.form.grid td,
+table.form.grid th {
     border: 0.1rem solid var(--p-gray-2);
     color: var(--p-gray-4);
 }
 
 /* Watchers */
 
-#action-area>ul[style="list-style: none"] {
+#action-area > ul[style="list-style: none"] {
     display: grid;
     margin: 0;
     padding: 0;
@@ -2370,7 +2388,7 @@ table.form.grid td, table.form.grid th {
     gap: .25rem;
 }
 
-#action-area>ul[style="list-style: none"] li {
+#action-area > ul[style="list-style: none"] li {
     list-style: none;
     line-height: 1rem;
     margin: 0.15rem 0;
@@ -2381,7 +2399,8 @@ table.form.grid td, table.form.grid th {
 #action-area:has(h1+h2+h2),
 #action-area:has(h1+h2+ul+h2),
 #action-area:has(h1+h2+h2+ul) {
-    font-size: 0; /* 隐藏裸文本 */
+    font-size: 0;
+    /* 隐藏裸文本 */
 }
 
 #action-area:has(h1+h2+ul+h2) h2,
@@ -2449,7 +2468,8 @@ table.form.grid td, table.form.grid th {
 
 /* Page Source */
 
-.page-source, .page-source a {
+.page-source,
+.page-source a {
     font-family: var(--p-font-monospace);
     border: none;
     word-break: break-all;
@@ -2496,31 +2516,39 @@ form#edit-meta-newtag-form table {
 form#edit-meta-newtag-form td {
     font-family: var(--p-font-monospace);
 }
+
 form#edit-meta-newtag-form table td:nth-child(5) {
     display: none;
 }
+
 form#edit-meta-newtag-form table td:nth-child(4) {
     grid-area: metatagtd4;
 }
+
 form#edit-meta-newtag-form table td:nth-child(3) {
     grid-area: metatagtd3;
     font-size: 0;
 }
+
 form#edit-meta-newtag-form table td:nth-child(3)::before {
     content: '标签属性 content=';
     font-size: 1rem;
 }
+
 form#edit-meta-newtag-form table td:nth-child(2) {
     grid-area: metatagtd2;
 }
+
 form#edit-meta-newtag-form table td:nth-child(1)::before {
     content: '标签属性 name=';
     font-size: 1rem;
 }
+
 form#edit-meta-newtag-form table td:nth-child(1) {
     grid-area: metatagtd1;
     font-size: 0;
 }
+
 form#edit-meta-newtag-form td input {
     display: block;
     width: calc(100% - 1rem);
@@ -2704,7 +2732,7 @@ form#edit-meta-newtag-form td input {
     height: auto;
 }
 
-.owindow .button-bar .btn[onclick*="cleanAll"], 
+.owindow .button-bar .btn[onclick*="cleanAll"],
 a.btn.btn-default.button.button-close {
     position: fixed;
     top: 0;
@@ -2722,7 +2750,7 @@ a.btn.btn-default.button.button-close {
     margin: 0rem 0rem;
 }
 
-:root .owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
+:root .owindow .button-bar .btn[onclick*="cleanAll"]:hover,
 a.btn.btn-default.button.button-close:hover {
     background: transparent !important;
 }
@@ -2758,8 +2786,7 @@ a.btn.btn-default.button.button-close:hover {
 :where(a, input, button).button.btn-default,
 :where(a, input, button).btn.btn-default,
 :where(a, input, button).btn-default,
-:is(.owindow .button-bar a)
-{
+:is(.owindow .button-bar a) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2776,41 +2803,34 @@ a.btn.btn-default.button.button-close:hover {
     text-decoration: none !important;
 }
 
-:is(
-    :where(a, input, button).button,
+:is( :where(a, input, button).button,
     :where(a, input, button).btn,
     :where(a, input, button).button.default,
     :where(a, input, button).btn.default,
     :where(a, input, button).button.btn-default,
     :where(a, input, button).btn.btn-default,
     :where(a, input, button).btn-default,
-    :is(.owindow .button-bar a)
-):hover
-{
+    :is(.owindow .button-bar a)):hover {
     border-color: var(--p-button-hover-border-color);
     background-color: var(--p-button-hover-background-color);
     color: var(--p-button-hover-color);
     text-decoration: none !important;
 }
 
-:is(
-    :where(a, input, button).button,
+:is( :where(a, input, button).button,
     :where(a, input, button).btn,
     :where(a, input, button).button.default,
     :where(a, input, button).btn.default,
     :where(a, input, button).button.btn-default,
     :where(a, input, button).btn.btn-default,
     :where(a, input, button).btn-default,
-    :is(.owindow .button-bar a)
-):focus-visible {
+    :is(.owindow .button-bar a)):focus-visible {
     outline: solid 0.15rem var(--p-theme-color);
 }
 
-:root :is(
-    :where(a, input, button).danger,
+:root :is( :where(a, input, button).danger,
     :where(a, input, button).btn-danger,
-    :is(.owindow .button-bar a).danger
-) {
+    :is(.owindow .button-bar a).danger) {
     background-color: var(--p-warning-color);
     border-color: var(--p-warning-color-dark);
     color: var(--p-white-gray);
@@ -2818,32 +2838,26 @@ a.btn.btn-default.button.button-close:hover {
     transition: background-color var(--p-animation-duration-short);
 }
 
-:root :is(
-    :where(a, input, button).danger:hover,
+:root :is( :where(a, input, button).danger:hover,
     :where(a, input, button).btn-danger:hover,
-    :is(.owindow .button-bar a).danger:hover
-) {
+    :is(.owindow .button-bar a).danger:hover) {
     background-color: var(--p-warning-color-dark) !important;
     color: var(--p-white-gray);
     text-decoration: none !important;
 }
 
-:root :is(
-    :where(a, input, button).primary,
+:root :is( :where(a, input, button).primary,
     :where(a, input, button).btn-primary,
-    :is(.owindow .button-bar a).primary
-) {
+    :is(.owindow .button-bar a).primary) {
     background-color: var(--p-theme-color);
     border-color: var(--p-theme-color-dark);
     color: var(--p-white-gray);
     text-decoration: none !important;
 }
 
-:root :is(
-    :where(a, input, button).primary:hover,
+:root :is( :where(a, input, button).primary:hover,
     :where(a, input, button).btn-primary:hover,
-    :is(.owindow .button-bar a).primary:hover
-) {
+    :is(.owindow .button-bar a).primary:hover) {
     background-color: var(--p-theme-color-dark);
     border-color: var(--p-theme-color-dark);
     color: var(--p-white-gray);
@@ -2870,7 +2884,8 @@ a:is(.btn-primary, .btn-primary:hover, .btn-danger, .btn-danger:hover):visited {
     overflow-x: hidden;
 }
 
-.owindow.owait .content.modal-body::before, .owindow.owait .content.modal-body::after {
+.owindow.owait .content.modal-body::before,
+.owindow.owait .content.modal-body::after {
     content: '●';
     display: block;
     width: 1rem;
@@ -3032,12 +3047,14 @@ div#footer {
     div#footer {
         text-align: center;
     }
+
     div#footer div.options {
         width: 100%;
     }
 }
 
-div#footer, div#license-area {
+div#footer,
+div#license-area {
     background: var(--p-black-gray);
     color: var(--p-white-gray);
     font-size: var(--p-font-size-xsmall);
@@ -3051,7 +3068,8 @@ div#footer div.options {
     float: right;
 }
 
-div#footer a, div#license-area a {
+div#footer a,
+div#license-area a {
     color: var(--p-gray);
     font-size: var(--p-font-size-xsmall);
     margin: 0rem 0.5rem;
@@ -3086,19 +3104,19 @@ div#footer a, div#license-area a {
 /* Footnotes */
 
 /* Even Better Footnotes by AgentFS */
- 
+
 div.hovertip {
     border-radius: 0;
     box-sizing: border-box;
-    background-color: var(--p-gray-0)!important;
-    border: none!important;
+    background-color: var(--p-gray-0) !important;
+    border: none !important;
     color: var(--p-gray-5);
     padding: 2.5rem 1rem 1rem 1rem;
-    width: min(25rem, 90vw)!important;
-    top: initial!important;
-    left: initial!important;
-    position: fixed!important;
-    display: block!important;
+    width: min(25rem, 90vw) !important;
+    top: initial !important;
+    left: initial !important;
+    position: fixed !important;
+    display: block !important;
     bottom: -2rem;
     right: max(calc(50% - 12.5rem), 5vw);
     transition: bottom var(--p-animation-duration-medium), opacity var(--p-animation-duration-medium), pointer-events var(--p-animation-duration-medium);
@@ -3165,43 +3183,76 @@ div#main-content .page-tags a[href^='/system:page-tags/tag/_'] {
 
 .colmod-block > ul,
 .colmod-block > ul > li {
-    display:block;
-    line-height:normal;
-    list-style:none;
-    margin:0;
-    padding:0;
+    display: block;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .colmod-block > ul > li > ul,
 li.folded > .colmod-link-top a + a,
 li.folded > .colmod-content,
 li.folded > .colmod-link-end a,
 li.unfolded > .colmod-link-top a:first-child {
-    display:none;
+    display: none;
 }
+
 .colmod-content {
-    -webkit-animation:colmod-fade-in 0.2s ease-in-out;
-    -moz-animation:colmod-fade-in 0.2s ease-in-out;
-    animation:colmod-fade-in 0.2s ease-in-out;
-    -webkit-animation-timing-function:cubic-bezier(0.3649610494,0,0.6350389506,1);
-    -moz-animation-timing-function:cubic-bezier(0.3649610494,0,0.6350389506,1);
-    animation-timing-function:cubic-bezier(0.3649610494,0,0.6350389506,1);
+    -webkit-animation: colmod-fade-in 0.2s ease-in-out;
+    -moz-animation: colmod-fade-in 0.2s ease-in-out;
+    animation: colmod-fade-in 0.2s ease-in-out;
+    -webkit-animation-timing-function: cubic-bezier(0.3649610494, 0, 0.6350389506, 1);
+    -moz-animation-timing-function: cubic-bezier(0.3649610494, 0, 0.6350389506, 1);
+    animation-timing-function: cubic-bezier(0.3649610494, 0, 0.6350389506, 1);
 }
+
 li.folded > .colmod-content {
-    -webkit-animation-name:none;
-    -moz-animation-name:none;
-    animation-name:none;
+    -webkit-animation-name: none;
+    -moz-animation-name: none;
+    animation-name: none;
 }
-@-webkit-keyframes colmod-fade-in { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes colmod-fade-in { from { opacity:0; } to { opacity:1; } }
-@keyframes colmod-fade-in { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes colmod-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes colmod-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes colmod-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 [class|="colmod-link"] div.foldable-list-container {
-    display:inline;
+    display: inline;
 }
+
 .colmod-collapsiblealt > [class|="colmod-link"],
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] {
-    margin:0.5em 0;
-    text-align:center;
+    margin: 0.5em 0;
+    text-align: center;
 }
+
 .colmod-collapsiblealt > [class|="colmod-link"] a,
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a {
     padding: 0.1rem 0.5rem;
@@ -3213,6 +3264,7 @@ li.folded > .colmod-content {
     font-size: var(--p-font-size-small);
     transition: background-color var(--p-animation-duration-short);
 }
+
 .colmod-collapsiblealt > [class|="colmod-link"] a:hover,
 .colmod-collapsiblealt > [class|="colmod-link"] a:active,
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:hover,
@@ -3224,7 +3276,8 @@ li.folded > .colmod-content {
 /* Content Warning */
 
 #page-content div#u-adult-warning {
-    width: 100%; /* 这是唯一和Sigma-9不同的地方，需确保宽度覆盖全页面，fit-content在过氧化物下只能覆盖部分文本 */
+    width: 100%;
+    /* 这是唯一和Sigma-9不同的地方，需确保宽度覆盖全页面，fit-content在过氧化物下只能覆盖部分文本 */
     margin: 0 auto 1.25rem;
     padding: 0.5rem 1rem;
     border: 3px solid #333;
@@ -3233,14 +3286,17 @@ li.folded > .colmod-content {
     text-align: center;
     font-weight: bold;
 }
+
 #page-content div#u-adult-warning > div#u-adult-header {
     font-size: 300%;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
     color: #901;
 }
+
 #page-content div#u-adult-warning > div#u-adult-header p {
     margin: 0;
 }
+
 #page-content div#u-adult-warning > .error-block {
     color: unset;
     padding: unset;
@@ -3248,24 +3304,28 @@ li.folded > .colmod-content {
     border: unset;
     margin-bottom: 1em;
 }
+
 #page-content div#u-component-top-box {
     max-width: 500px;
     margin: 0 auto 1.25rem;
     padding: 1rem;
     background-color: #b01;
     border-radius: 20px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.5), inset 0 10px 1px rgba(255,255,255,.5), inset 0 -15px 30px rgba(0,0,0,.25);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 10px 1px rgba(255, 255, 255, .5), inset 0 -15px 30px rgba(0, 0, 0, .25);
     color: #fff;
     text-align: center;
     font-weight: bold;
 }
+
 #page-content div#u-component-top-box > div#u-component-header {
     font-size: 300%;
-    text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
 }
+
 #page-content div#u-component-top-box > div#u-component-header p {
     margin: 0;
 }
+
 #page-content div#u-archived-top-box {
     max-width: 375px;
     margin: 0 auto 1.75rem;
@@ -3276,17 +3336,19 @@ li.folded > .colmod-content {
     color: #333;
     text-align: center;
 }
+
 #page-content div#u-archived-top-box > div#u-archived-header {
     font-size: 150%;
     font-weight: bold;
 }
+
 #page-content div#u-archived-top-box > div#u-archived-header p {
     margin: 0;
 }
- 
-/* === 结束 Base.css === */ 
- 
-/* === Elements.css === */ 
+
+/* === 结束 Base.css === */
+
+/* === Elements.css === */
 /* 
  * Elements.css
  * 元素
@@ -3370,7 +3432,8 @@ code {
     color: var(--p-white-gray);
 }
 
-.code, pre {
+.code,
+pre {
     font-family: var(--p-font-monospace);
 }
 
@@ -3538,6 +3601,7 @@ input[type="radio"]:focus {
         outline-color: var(--p-theme-color-light);
         outline-offset: 0rem;
     }
+
     100% {
         outline-color: transparent;
         outline-offset: 0.5rem;
@@ -3574,7 +3638,8 @@ a.avatar-hover {
     flex-wrap: wrap;
 }
 
-input.text:focus, input.text:focus-visible {
+input.text:focus,
+input.text:focus-visible {
     border-color: var(--p-theme-color);
     outline: none;
     background-color: transparent;
@@ -3616,7 +3681,9 @@ input.text {
     border: solid 0.1rem var(--p-gray-3);
 }
 
-input.button, input[type="button"], input[type="submit"] {
+input.button,
+input[type="button"],
+input[type="submit"] {
     margin: 0;
     padding: 0.4rem 0.5rem;
     border-radius: var(--p-border-radius-medium);
@@ -3627,7 +3694,8 @@ input.button, input[type="button"], input[type="submit"] {
     color: var(--p-gray-5);
 }
 
-select:focus, select:focus-visible {
+select:focus,
+select:focus-visible {
     outline: none;
     border-color: var(--p-theme-color);
 }
@@ -3643,7 +3711,7 @@ select {
 
 /* Yahoo UI Tabs */
 
-#main-content ul.yui-nav>li>a:hover {
+#main-content ul.yui-nav > li > a:hover {
     text-decoration: none;
 }
 
@@ -3763,13 +3831,14 @@ div.yui-navset ul.yui-nav .selected a,
 div.yui-navset ul.yui-nav .selected a:focus,
 div.yui-navset ul.yui-nav .selected a:hover {
     background: var(--p-tabview-navset-background) !important;
-    color: var(--p-tabview-navset-button-color)  !important;
+    color: var(--p-tabview-navset-button-color) !important;
     text-align: center;
     font-weight: normal;
     border: none;
     box-shadow: none;
     width: calc(100% - 1.5rem);
-    -webkit-text-stroke: 0.6px var(--p-tabview-navset-button-color); /* 为了解决字体加粗导致的flex重排问题 */
+    -webkit-text-stroke: 0.6px var(--p-tabview-navset-button-color);
+    /* 为了解决字体加粗导致的flex重排问题 */
 }
 
 @supports not (-webkit-text-stroke: 0.6px var(--p-tabview-navset-button-color)) {
@@ -3780,7 +3849,7 @@ div.yui-navset ul.yui-nav .selected a:hover {
 }
 
 div.yui-navset ul.yui-nav .selected a:hover {
-    color: var(--p-tabview-navset-button-hover-color)  !important;
+    color: var(--p-tabview-navset-button-hover-color) !important;
 }
 
 div.yui-navset ul.yui-nav a,
@@ -3875,9 +3944,9 @@ div#toc-list {
     margin: 0 !important;
 }
 
-#page-content div.creditRate, 
-#page-content div.creditRate div, 
-div.rate-box-with-credit-button .creditButton{
+#page-content div.creditRate,
+#page-content div.creditRate div,
+div.rate-box-with-credit-button .creditButton {
     max-width: unset;
     background: transparent;
     border: none;
@@ -3894,7 +3963,8 @@ div.rate-box-with-credit-button .creditButton{
     height: auto;
 }
 
-div.page-rate-widget-box, .rate-box-with-credit-button {
+div.page-rate-widget-box,
+.rate-box-with-credit-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -3905,7 +3975,9 @@ div.page-rate-widget-box {
     font-weight: bold;
 }
 
-div.page-rate-widget-box a, div.rate-box-with-credit-button, .page-rate-widget-box a:hover {
+div.page-rate-widget-box a,
+div.rate-box-with-credit-button,
+.page-rate-widget-box a:hover {
     background-color: transparent !important;
     box-shadow: none;
     border: none;
@@ -3995,8 +4067,8 @@ div.page-rate-widget-box .cancel:hover a::before {
     display: contents;
 }
 
-div.creditButton a, 
-div.creditButton p a, 
+div.creditButton a,
+div.creditButton p a,
 div.creditButtonStandalone a,
 div.creditButtonStandalone p a {
     border: none;
@@ -4010,14 +4082,14 @@ div.creditButtonStandalone p a {
     transition: all var(--p-animation-duration-short);
 }
 
-.creditButton a:hover, 
+.creditButton a:hover,
 .creditButton p a:hover,
 .creditButtonStandalone a:hover,
 .creditButtonStandalone p a:hover {
     background-color: var(--p-theme-color) !important;
 }
 
-.creditButton a::before, 
+.creditButton a::before,
 .creditButtonStandalone a::before,
 .creditButtonStandalone a::before,
 .creditButtonStandalone p a::before {
@@ -4029,17 +4101,21 @@ div.creditButtonStandalone p a {
 .changes-list-item :is(table, tbody, tr) {
     display: contents;
 }
+
 .changes-list-item tr td {
     display: block;
     width: 100% !important;
 }
+
 .changes-list-item .mod-by {
     grid-area: mod-by;
 }
+
 .changes-list-item .revision-no {
     grid-area: revision-no;
     text-align: right;
 }
+
 .changes-list-item .mod-date {
     grid-area: mod-date;
     text-align: right;
@@ -4049,14 +4125,17 @@ div.creditButtonStandalone p a {
 .changes-list-item .flags {
     grid-area: flags;
 }
+
 .changes-list-item .title {
     grid-area: title;
 }
+
 .changes-list-item:hover {
     background-color: transparent !important;
     outline: solid 0.1rem var(--p-theme-color);
     border-radius: var(--p-border-radius-medium);
 }
+
 .changes-list-item {
     display: grid;
     grid-template-areas:
@@ -4146,6 +4225,7 @@ div.creditButtonStandalone p a {
 .forum-thread-box .description-block .statistics a {
     color: var(--p-theme-color-light);
 }
+
 .forum-thread-box .description-block .statistics {
     color: var(--p-gray-1);
 }
@@ -4282,7 +4362,12 @@ span.rss-icon {
     color: var(--p-default-button-hover-color);
 }
 
-div.new-post a, div.buttons input, input.button, button, a.button, #page-content a.btn {
+div.new-post a,
+div.buttons input,
+input.button,
+button,
+a.button,
+#page-content a.btn {
     background-color: var(--p-default-button-background-color);
     border: var(--p-default-button-border);
     border-radius: var(--p-default-button-border-radius);
@@ -4418,11 +4503,11 @@ rt {
     border-radius: 0 0 var(--p-scp-image-block-caption-border-radius) var(--p-scp-image-block-caption-border-radius);
 }
 
-.scp-image-block>p {
+.scp-image-block > p {
     margin: 0;
 }
 
-.scp-image-block .scp-image-caption>p {
+.scp-image-block .scp-image-caption > p {
     margin: 0;
     padding: 0;
 }
@@ -4536,7 +4621,8 @@ ul#ui-tabs.nav li {
     display: contents;
 }
 
-ul#ui-tabs.nav li a:hover, ul#ui-tabs.nav li.active a {
+ul#ui-tabs.nav li a:hover,
+ul#ui-tabs.nav li.active a {
     text-decoration: none;
     background-color: var(--p-gray-4);
     color: var(--p-gray-2);
@@ -4577,7 +4663,7 @@ div.p-bqc {
     width: calc(100% - var(--p-blockquote-padding-x) * 2);
 }
 
-:where(blockquote,div.blockquote,.p-bq) :where(blockquote, div.blockquote, .p-bq) {
+:where(blockquote, div.blockquote, .p-bq) :where(blockquote, div.blockquote, .p-bq) {
     border-left: var(--p-blockquote-border-left-secondary);
     border-top: var(--p-blockquote-border-top-secondary);
     border-right: var(--p-blockquote-border-right-secondary);
@@ -4662,10 +4748,10 @@ div.wiki-note {
     color: var(--p-gray-6);
 }
 
-:where( div.underline, 
-        div.doubleline, 
-        div.p-ud, 
-        div.p-dl).dark {
+:where(div.underline,
+    div.doubleline,
+    div.p-ud,
+    div.p-dl).dark {
     border-color: var(--p-theme-color-light);
 }
 
@@ -4691,7 +4777,7 @@ div.wiki-note {
     list-style: none;
 }
 
-.wd-editor-toolbar-panel ul li a, 
+.wd-editor-toolbar-panel ul li a,
 .wd-editor-toolbar-panel ul li ul li a {
     height: 2rem;
     width: 2rem;
@@ -4750,7 +4836,7 @@ div.wiki-note {
     background: var(--p-gray-4);
 }
 
-div#wd-editor-toolbar-panel>div ul {
+div#wd-editor-toolbar-panel > div ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -5033,70 +5119,70 @@ div#wd-editor-toolbar-panel > div ul li ul {
     --p-highlight-default: var(--p-white);
     --p-highlight-default-weight: normal;
     --p-highlight-default-style: normal;
-    
+
     --p-highlight-code: var(--p-white);
     --p-highlight-code-weight: normal;
     --p-highlight-code-style: normal;
-    
+
     --p-highlight-brackets: var(--p-gray);
     --p-highlight-brackets-weight: normal;
     --p-highlight-brackets-style: normal;
-    
+
     --p-highlight-comment: var(--p-light-green);
     --p-highlight-comment-weight: normal;
     --p-highlight-comment-style: italic;
-    
+
     --p-highlight-quotes: var(--p-light-green);
     --p-highlight-quotes-weight: normal;
     --p-highlight-quotes-style: normal;
-    
+
     --p-highlight-string: var(--p-light-green);
     --p-highlight-string-weight: normal;
     --p-highlight-string-style: normal;
-    
+
     --p-highlight-identifier: var(--p-white);
     --p-highlight-identifier-weight: normal;
     --p-highlight-identifier-style: normal;
-    
+
     --p-highlight-builtin: var(--p-light-blue);
     --p-highlight-builtin-weight: normal;
     --p-highlight-builtin-style: normal;
-    
+
     --p-highlight-reserved: var(--p-light-purple);
     --p-highlight-reserved-weight: normal;
     --p-highlight-reserved-style: normal;
-    
+
     --p-highlight-inlinedoc: var(--p-light-blue);
     --p-highlight-inlinedoc-weight: normal;
     --p-highlight-inlinedoc-style: italic;
-    
+
     --p-highlight-var: var(--p-light-orange);
     --p-highlight-var-weight: normal;
     --p-highlight-var-style: normal;
-    
+
     --p-highlight-url: var(--p-light-blue);
     --p-highlight-url-weight: normal;
     --p-highlight-url-style: underline;
-    
+
     --p-highlight-special: var(--p-light-yellow);
     --p-highlight-special-weight: bold;
     --p-highlight-special-style: normal;
-    
+
     --p-highlight-number: var(--p-light-orange);
     --p-highlight-number-weight: normal;
     --p-highlight-number-style: normal;
-    
+
     --p-highlight-inlinetags: var(--p-light-purple);
     --p-highlight-inlinetags-weight: bold;
     --p-highlight-inlinetags-style: normal;
-    
+
     --p-highlight-main-background: var(--p-black-gray);
-    
+
     --p-highlight-gutter: var(--p-gray);
     --p-highlight-gutter-weight: normal;
     --p-highlight-gutter-style: normal;
     --p-highlight-gutter-background: transparent;
-    
+
     --p-highlight-table: var(--p-gray-5);
     --p-highlight-table-weight: normal;
     --p-highlight-table-style: normal;
@@ -5108,82 +5194,98 @@ div#wd-editor-toolbar-panel > div ul li ul {
     font-weight: var(--p-highlight-default-weight);
     font-style: var(--p-highlight-default-style);
 }
+
 .hl-code {
     color: var(--p-highlight-code);
     font-weight: var(--p-highlight-code-weight);
     font-style: var(--p-highlight-code-style);
 }
+
 .hl-brackets {
     color: var(--p-highlight-brackets);
     font-weight: var(--p-highlight-brackets-weight);
     font-style: var(--p-highlight-brackets-style);
 }
+
 .hl-comment {
     color: var(--p-highlight-comment);
     font-weight: var(--p-highlight-comment-weight);
     font-style: var(--p-highlight-comment-style);
 }
+
 .hl-quotes {
     color: var(--p-highlight-quotes);
     font-weight: var(--p-highlight-quotes-weight);
     font-style: var(--p-highlight-quotes-style);
 }
+
 .hl-string {
     color: var(--p-highlight-string);
     font-weight: var(--p-highlight-string-weight);
     font-style: var(--p-highlight-string-style);
 }
+
 .hl-identifier {
     color: var(--p-highlight-identifier);
     font-weight: var(--p-highlight-identifier-weight);
     font-style: var(--p-highlight-identifier-style);
 }
+
 .hl-builtin {
     color: var(--p-highlight-builtin);
     font-weight: var(--p-highlight-builtin-weight);
     font-style: var(--p-highlight-builtin-style);
 }
+
 .hl-reserved {
     color: var(--p-highlight-reserved);
     font-weight: var(--p-highlight-reserved-weight);
     font-style: var(--p-highlight-reserved-style);
 }
+
 .hl-inlinedoc {
     color: var(--p-highlight-inlinedoc);
     font-weight: var(--p-highlight-inlinedoc-weight);
     font-style: var(--p-highlight-inlinedoc-style);
 }
+
 .hl-var {
     color: var(--p-highlight-var);
     font-weight: var(--p-highlight-var-weight);
     font-style: var(--p-highlight-var-style);
 }
+
 .hl-url {
     color: var(--p-highlight-url);
     font-weight: var(--p-highlight-url-weight);
     font-style: var(--p-highlight-url-style);
 }
+
 .hl-special {
     color: var(--p-highlight-special);
     font-weight: var(--p-highlight-special-weight);
     font-style: var(--p-highlight-special-style);
 }
+
 .hl-number {
     color: var(--p-highlight-number);
     font-weight: var(--p-highlight-number-weight);
     font-style: var(--p-highlight-number-style);
 }
+
 .hl-inlinetags {
     color: var(--p-highlight-inlinetags);
     font-weight: var(--p-highlight-inlinetags-weight);
     font-style: var(--p-highlight-inlinetags-style);
 }
+
 .hl-gutter {
     background-color: var(--p-highlight-gutter-background);
     color: var(--p-highlight-gutter);
     font-weight: var(--p-highlight-gutter-weight);
     font-style: var(--p-highlight-gutter-style);
 }
+
 .hl-table {
     background-color: var(--p-highlight-table-background);
     color: var(--p-highlight-table);
@@ -5193,7 +5295,7 @@ div#wd-editor-toolbar-panel > div ul li ul {
 
 /* SSL Warning block */
 
-div#extrac-div-3+div[style="color: #A00; background-color: #FFF; margin: 0.5em 1em; padding: 0.5em 1em; border: 1px solid #999;"] {
+div#extrac-div-3 + div[style="color: #A00; background-color: #FFF; margin: 0.5em 1em; padding: 0.5em 1em; border: 1px solid #999;"] {
     color: var(--p-white) !important;
     background-color: var(--p-black-gray) !important;
     border: none !important;
@@ -5251,10 +5353,10 @@ span.equation-number {
     color: var(--p-gray-0);
     text-decoration: none;
 }
- 
-/* === 结束 Elements.css === */ 
- 
-/* === Capabilities.css === */ 
+
+/* === 结束 Elements.css === */
+
+/* === Capabilities.css === */
 /*
  * Capabilities.css
  * 兼容性
@@ -5270,28 +5372,28 @@ span.equation-number {
     --mox-theme-light-color: var(--p-theme-color-light);
     --mox-bg-color: var(--p-gray-0);
     --mox-text-color: var(--p-gray-5);
- 
+
     --mox-layer-dark-1: var(--p-gray-4);
     --mox-layer-dark-2: var(--p-gray-5);
     --mox-layer-dark-3: var(--p-gray-6);
- 
+
     --mox-layer-light-1: var(--p-gray-1);
     --mox-layer-light-2: var(--p-gray-2);
     --mox-layer-light-3: var(--p-gray-3);
     --mox-bgblur-front-color: var(--p-light-transparent-0-8);
- 
+
     --mox-warn-color: var(--p-warning-color);
     --mox-accept-color: var(--p-success-color);
     --mox-alter-color: var(--p-info-color);
- 
+
     --mox-header-title: var(--p-header-title-content);
     --mox-header-subtitle: var(--p-header-slogan-content);
     --mox-header-logo: var(--p-header-logo-background);
- 
+
     --mox-page-width: var(--p-main-content-width);
     --mox-header-height: var(--p-header-height);
     --mox-anim-duration: var(--p-animation-duration-short);
- 
+
     --mox-ui-font: var(--p-font-sans-serif);
     --mox-text-font: var(--p-font-sans-serif);
     --mox-mono-font: var(--p-font-monospace);
@@ -5306,7 +5408,7 @@ span.equation-number {
     --basalt-main-text-color: var(--p-gray-5);
     --basalt-overtone: var(--p-gray-4);
     --basalt-undertone: var(--p-theme-color-light);
- 
+
     --basalt-bright-element-color: var(--p-blue);
     --basalt-dark-element-color: var(--p-dark-blue);
     --basalt-alternate-color: var(--p-orange);
@@ -5315,7 +5417,7 @@ span.equation-number {
     --basalt-cancel-color: var(--basalt-negative-color);
     --basalt-sub-text-color: var(--p-gray-3);
     --basalt-light-text-color: var(--basalt-primary-color);
- 
+
     --basalt-UI-dark-palette: var(--basalt-overtone);
     --basalt-focus-color: var(--basalt-undertone);
     --basalt-background-color: var(--basalt-primary-color);
@@ -5328,7 +5430,7 @@ span.equation-number {
     --header-logo: var(--p-header-logo-background);
     --title-size: var(--p-header-title-font-size);
     --subtitle-size: var(--p-header-slogan-font-size);
- 
+
     --base-font-size: var(--p-font-size-base);
     --main-content-width: var(--p-main-content-max-width);
     --side-bar-width: var(--p-sidebar-width);
@@ -5424,10 +5526,11 @@ div#u-component-header {
     font-weight: bold;
     font-size: 150%;
     margin-bottom: -1rem;
-} 
-/* === 结束 Capabilities.css === */ 
- 
-/* === Localization.css === */ 
+}
+
+/* === 结束 Capabilities.css === */
+
+/* === Localization.css === */
 /* 
  * Localization.css
  * 伪元素本地化文本
@@ -5439,11 +5542,14 @@ div#u-component-header {
     --LOC-close: 'Close';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-close: '关闭';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-close: '閉じる';
 }
 
@@ -5478,7 +5584,9 @@ div#u-component-header {
     --LOC-manage-attachments: 'Manage Attachments';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-file-type-svg: 'SVG 矢量图形';
     --LOC-file-type-png: 'PNG 图像';
     --LOC-file-type-jpeg: 'JPEG 图像';
@@ -5507,7 +5615,8 @@ div#u-component-header {
     --LOC-manage-attachments: '管理附件';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-file-type-svg: 'SVG ベクターグラフィックス';
     --LOC-file-type-png: 'PNG 画像';
     --LOC-file-type-jpeg: 'JPEG 画像';
@@ -5536,8 +5645,7 @@ div#u-component-header {
     --LOC-manage-attachments: '添付ファイルの管理';
 }
 
-tr[id*="file-row"] :is(
-    span[title*="SVG"],
+tr[id*="file-row"] :is(span[title*="SVG"],
     span[title*="PNG"],
     span[title*="JPEG"],
     span[title*="GIF"],
@@ -5554,21 +5662,18 @@ tr[id*="file-row"] :is(
     span[title*="PowerPoint"],
     span[title*="Excel"],
     span[title*="Word"],
-    span[title*="Access"]
-),
-table.page-files td:has(a[href*=".obj"])+td span,
-table.page-files td:has(a[href*=".txt"])+td span,
-table.page-files td:has(a[href*=".js"])+td span,
-table.page-files td:has(a[href*=".css"])+td span,
-table.page-files td:has(a[href*=".html"])+td span,
-table.page-files td:has(a[href*=".xml"])+td span,
-table.page-files td:has(a[href*=".exe"])+td span
-{
+    span[title*="Access"]),
+table.page-files td:has(a[href*=".obj"]) + td span,
+table.page-files td:has(a[href*=".txt"]) + td span,
+table.page-files td:has(a[href*=".js"]) + td span,
+table.page-files td:has(a[href*=".css"]) + td span,
+table.page-files td:has(a[href*=".html"]) + td span,
+table.page-files td:has(a[href*=".xml"]) + td span,
+table.page-files td:has(a[href*=".exe"]) + td span {
     font-size: 0rem;
 }
 
-tr[id*="file-row"] :is(
-    span[title*="SVG"],
+tr[id*="file-row"] :is(span[title*="SVG"],
     span[title*="PNG"],
     span[title*="JPEG"],
     span[title*="GIF"],
@@ -5585,16 +5690,14 @@ tr[id*="file-row"] :is(
     span[title*="PowerPoint"],
     span[title*="Excel"],
     span[title*="Word"],
-    span[title*="Access"]
-)::before,
-table.page-files td:has(a[href*=".obj"])+td span::before,
-table.page-files td:has(a[href*=".txt"])+td span::before,
-table.page-files td:has(a[href*=".js"])+td span::before,
-table.page-files td:has(a[href*=".css"])+td span::before,
-table.page-files td:has(a[href*=".html"])+td span::before,
-table.page-files td:has(a[href*=".xml"])+td span::before,
-table.page-files td:has(a[href*=".exe"])+td span::before
-{
+    span[title*="Access"])::before,
+table.page-files td:has(a[href*=".obj"]) + td span::before,
+table.page-files td:has(a[href*=".txt"]) + td span::before,
+table.page-files td:has(a[href*=".js"]) + td span::before,
+table.page-files td:has(a[href*=".css"]) + td span::before,
+table.page-files td:has(a[href*=".html"]) + td span::before,
+table.page-files td:has(a[href*=".xml"]) + td span::before,
+table.page-files td:has(a[href*=".exe"]) + td span::before {
     font-size: 1rem;
 }
 
@@ -5679,31 +5782,31 @@ tr[id*="file-row"] span[title*="Access"]::before {
     content: var(--LOC-file-type-access);
 }
 
-table.page-files td:has(a[href*=".obj"])+td span::before {
+table.page-files td:has(a[href*=".obj"]) + td span::before {
     content: var(--LOC-file-type-obj);
 }
 
-table.page-files td:has(a[href*=".txt"])+td span::before {
+table.page-files td:has(a[href*=".txt"]) + td span::before {
     content: var(--LOC-file-type-txt);
 }
 
-table.page-files td:has(a[href*=".js"])+td span::before {
+table.page-files td:has(a[href*=".js"]) + td span::before {
     content: var(--LOC-file-type-js);
 }
 
-table.page-files td:has(a[href*=".css"])+td span::before {
+table.page-files td:has(a[href*=".css"]) + td span::before {
     content: var(--LOC-file-type-css);
 }
 
-table.page-files td:has(a[href*=".html"])+td span::before {
+table.page-files td:has(a[href*=".html"]) + td span::before {
     content: var(--LOC-file-type-html);
 }
 
-table.page-files td:has(a[href*=".xml"])+td span::before {
+table.page-files td:has(a[href*=".xml"]) + td span::before {
     content: var(--LOC-file-type-xml);
 }
 
-table.page-files td:has(a[href*=".exe"])+td span::before {
+table.page-files td:has(a[href*=".exe"]) + td span::before {
     content: var(--LOC-file-type-exe);
 }
 
@@ -5715,31 +5818,30 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-website-tools-draft-pages: 'Draft Pages';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-website-tools-wanted-pages: '待建页面';
     --LOC-website-tools-orphaned-pages: '孤立页面';
     --LOC-website-tools-draft-pages: '草稿页面';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-website-tools-wanted-pages: '未作成ページ';
     --LOC-website-tools-orphaned-pages: '孤立ページ';
     --LOC-website-tools-draft-pages: '下書きページ';
 }
 
-#action-area :is(
-    a[onclick*="SiteToolsModule.listeners.wantedPages"],
+#action-area :is(a[onclick*="SiteToolsModule.listeners.wantedPages"],
     a[onclick*="SiteToolsModule.listeners.orphanedPages"],
-    a[onclick*="SiteToolsModule.listeners.draftPages"]
-) {
+    a[onclick*="SiteToolsModule.listeners.draftPages"]) {
     font-size: 0rem;
 }
 
-#action-area :is(
-    a[onclick*="SiteToolsModule.listeners.wantedPages"],
+#action-area :is(a[onclick*="SiteToolsModule.listeners.wantedPages"],
     a[onclick*="SiteToolsModule.listeners.orphanedPages"],
-    a[onclick*="SiteToolsModule.listeners.draftPages"]
-)::before {
+    a[onclick*="SiteToolsModule.listeners.draftPages"])::before {
     font-size: 1rem;
 }
 
@@ -5762,12 +5864,15 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-watchers-description: 'Those people will receive notifications when changes are made to this page or the page is commented.';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-watchers-title: '此页面的关注者　';
     --LOC-watchers-description: '当此页面或页面被评论时，这些人将收到通知。';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-watchers-title: 'このページを監視する人';
     --LOC-watchers-description: 'このページまたはページがコメントされたとき、これらの人は通知を受け取ります。';
 }
@@ -5809,14 +5914,17 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-owindow-draft-title: 'Draft Exists';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-owindow-cancel-and-leave-draft: '离开并保留草稿';
     --LOC-owindow-cancel-and-delete-draft: '离开并删除草稿';
     --LOC-owindow-draft: '你已经保存了草稿，请选择一个选项。';
     --LOC-owindow-draft-title: '已有草稿';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-owindow-cancel-and-leave-draft: '下書きを保存して終了';
     --LOC-owindow-cancel-and-delete-draft: '下書きを削除して終了';
     --LOC-owindow-draft: 'あなたは既に下書きを保存しました。選択してください。';
@@ -5856,11 +5964,14 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-page-tags: 'Tags';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-page-tags: '标签';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-page-tags: 'タグ';
 }
 
@@ -5870,11 +5981,14 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-close-message: 'Close Message';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-close-message: '关闭消息';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-close-message: 'メッセージを閉じる';
 }
 
@@ -5893,11 +6007,14 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-footnotes: 'Footnotes';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-footnotes: '脚注';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-footnotes: '脚注';
 }
 
@@ -5916,11 +6033,14 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-less-option: 'More Option';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-less-option: '更多选项';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-less-option: 'その他のオプション';
 }
 
@@ -5940,22 +6060,25 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-permanent-link-text: 'Permanent link for this post is:';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-permanent-link-title: '永久链接';
     --LOC-permanent-link-text: '此帖子的永久链接是：';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-permanent-link-title: '永続リンク';
     --LOC-permanent-link-text: 'この投稿の永続リンクは：';
 }
 
-body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div))+div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1::before {
+body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div)) + div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1::before {
     content: var(--LOC-permanent-link-title);
     font-size: var(--p-font-size-xlarge);
 }
 
-body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div))+div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1+p::before {
+body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div)) + div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1 + p::before {
     content: var(--LOC-permanent-link-text);
     font-size: var(--p-font-size-medium);
 }
@@ -5966,11 +6089,14 @@ body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div))+div.content.m
     --LOC-close-window: 'Close Window';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-close-window: '关闭窗口';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-close-window: 'ウィンドウを閉じる';
 }
 
@@ -5989,11 +6115,14 @@ a.btn.btn-default.button.button-close-window::before {
     --LOC-insert-code: 'Insert Code';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-insert-code: '插入代码';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-insert-code: 'コードを挿入する';
 }
 
@@ -6012,11 +6141,14 @@ a.btn.btn-default.button.button-insert-code::before {
     --LOC-cancel: 'Cancel';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-cancel: '取消';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-cancel: 'キャンセル';
 }
 
@@ -6035,11 +6167,14 @@ a.btn.btn-default.button.button-cancel::before {
     --LOC-yes-revert: 'I know what I am doing!';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-yes-revert: '我知道我在做什么！';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-yes-revert: '私は自分が何をしているか分かっています。';
 }
 
@@ -6062,7 +6197,9 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: 'Do not revert page versions unless you really know what you are doing. You can still undo this action by reverting again later.\A';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-revert-confirm-title: '需要确认的操作';
     --LOC-revert-confirm-content-1: '你确定要回档页面吗？';
     --LOC-revert-confirm-content-2: '你正在尝试将整个页面回退到第';
@@ -6072,7 +6209,8 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: '除非你真的知道自己在做什么，否则不要轻易回退页面版本。你在之后仍然可以通过再次回退的方式撤销这次操作。\A';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-revert-confirm-title: '操作の確認';
     --LOC-revert-confirm-content-1: 'このページを元に戻しますか？';
     --LOC-revert-confirm-content-2: 'ページ全体をバージョン';
@@ -6082,13 +6220,11 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: '自分が何をしているのかを確実に理解している場合を除き、ページバージョンを元に戻さないでください。後で再度元に戻すことでこの操作を取り消すことはできます。\A';
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) :where(
-    .title,
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) :where(.title,
     h1,
     .content > p:nth-child(2),
     .content > p:nth-child(3),
-    .content > p:nth-child(4)
-) {
+    .content > p:nth-child(4)) {
     font-size: 0;
     margin-bottom: 1rem;
 }
@@ -6104,37 +6240,37 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) h1::be
     font-size: var(--p-font-size-xlarge);
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2)::before {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(2)::before {
     content: var(--LOC-revert-confirm-content-2);
     font-size: var(--p-font-size-medium);
     white-space: pre-wrap;
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(2) strong {
     font-size: var(--p-font-size-medium);
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong::after {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(2) strong::after {
     content: var(--LOC-revert-confirm-content-3);
     font-size: var(--p-font-size-medium);
     font-weight: normal;
     white-space: pre-wrap;
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(3)::before {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(3)::before {
     content: var(--LOC-revert-confirm-content-4);
     font-size: var(--p-font-size-medium);
     white-space: pre-wrap;
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::before {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(4)::before {
     content: var(--LOC-revert-confirm-content-5);
     font-size: var(--p-font-size-medium);
     font-weight: bold;
     color: var(--p-warning-color);
 }
 
-div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::after {
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content > p:nth-child(4)::after {
     content: var(--LOC-revert-confirm-content-6);
     font-size: var(--p-font-size-medium);
     white-space: pre-wrap;
@@ -6146,11 +6282,14 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .conte
     --LOC-rename-option-delete: 'This will remove the page completely and it will not be possible to recover the data. Are you sure you want to do this?';
 }
 
-:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+:root:lang(cn),
+:root:lang(zh),
+:root:lang(zh-cn) {
     --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
 }
 
-:root:lang(ja), :root[lang="ja-corrections"] {
+:root:lang(ja),
+:root[lang="ja-corrections"] {
     --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
 }
 
@@ -6162,5 +6301,5 @@ div#rename-option-delete p::before {
     content: var(--LOC-rename-option-delete);
     font-size: var(--p-font-size-medium);
 }
- 
-/* === 结束 Localization.css === */ 
+
+/* === 结束 Localization.css === */
