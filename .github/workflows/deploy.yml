@@ -5,6 +5,8 @@ on:
     branches: [master]
     paths:
       - 'style/**/*.css'
+      - '!style/**/*.min.css'
+      - 'index.html'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -30,15 +32,16 @@ jobs:
         with:
           node-version: 20
 
-      # ---------- 压缩 CSS ----------
       - name: Install minifier (csso)
         run: npm install -g csso-cli
 
-      - name: Minify CSS (exclude impact.css)
+      - name: Minify CSS
         run: |
           for file in style/*.css; do
             name=$(basename "$file")
             [ "$name" = "impact.css" ] && continue
+            case "$name" in *.min.*) continue ;; esac
+            
             csso "$file" -o "style/${name%.css}.min.css"
           done
 
@@ -50,7 +53,6 @@ jobs:
           git diff --cached --quiet || git commit -m "chore(style): minify css"
           git push
 
-      # ---------- 打包并部署 ----------
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
