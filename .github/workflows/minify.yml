@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -32,7 +32,6 @@ jobs:
         run: |
           shopt -s globstar
           for file in style/**/*.css; do
-            # 跳过已经是 .min.css 的文件
             if [[ "$file" == *.min.css ]]; then
               continue
             fi
@@ -40,11 +39,8 @@ jobs:
             minfile="${file%.css}.min.css"
 
             echo "Minifying $file → $minfile"
-
-            # 压缩 CSS
             cleancss "$file" -o "$minfile"
 
-            # 替换 @import 中的 .css → .min.css
             sed -i 's/@import\(.*\)"\([^"]*\)\.css"/@import\1"\2.min.css"/g' "$minfile"
           done
 
