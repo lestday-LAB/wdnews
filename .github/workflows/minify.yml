@@ -1,0 +1,63 @@
+name: Minify CSS
+
+on:
+  push:
+    paths:
+      - 'style/**/*.css'
+  workflow_dispatch:
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          npm install -g clean-css-cli
+
+      - name: Minify CSS files
+        run: |
+          shopt -s globstar
+          for file in style/**/*.css; do
+            # 跳过已经是 .min.css 的文件
+            if [[ "$file" == *.min.css ]]; then
+              continue
+            fi
+
+            minfile="${file%.css}.min.css"
+
+            echo "Minifying $file → $minfile"
+
+            # 压缩 CSS
+            cleancss "$file" -o "$minfile"
+
+            # 替换 @import 中的 .css → .min.css
+            sed -i 's/@import\(.*\)"\([^"]*\)\.css"/@import\1"\2.min.css"/g' "$minfile"
+          done
+
+      - name: Commit minified files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add style/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(css): auto minify css files"
+            git push
+          fi
