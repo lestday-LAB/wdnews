@@ -1,59 +1,67 @@
-name: Minify CSS
+name: Minify CSS & Deploy Pages
 
 on:
   push:
+    branches: [master]
     paths:
       - 'style/**/*.css'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  BUILD_DIR: .
+
 jobs:
-  minify:
+  build:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
+      # ---------- 压缩 CSS ----------
+      - name: Install minifier
+        run: npm install -g clean-css-cli
+
+      - name: Minify CSS (exclude impact.css)
         run: |
-          npm install -g clean-css-cli
-
-      - name: Minify CSS files
-        run: |
-          shopt -s globstar
-          for file in style/**/*.css; do
-            if [[ "$file" == *.min.css ]]; then
-              continue
-            fi
-
-            minfile="${file%.css}.min.css"
-
-            echo "Minifying $file → $minfile"
-            cleancss "$file" -o "$minfile"
-
-            sed -i 's/@import\(.*\)"\([^"]*\)\.css"/@import\1"\2.min.css"/g' "$minfile"
+          for file in style/*.css; do
+            name=$(basename "$file")
+            [ "$name" = "impact.css" ] && continue
+            cleancss -o "style/${name%.css}.min.css" "$file"
           done
 
       - name: Commit minified files
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add style/*.min.css
+          git diff --cached --quiet || git commit -m "chore(style): minify css"
+          git push
 
-          git add style/
+      # ---------- 打包并部署 ----------
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_DIR }}
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore(css): auto minify css files"
-            git push
-          fi
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
