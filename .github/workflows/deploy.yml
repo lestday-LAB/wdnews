@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -39,7 +39,10 @@ jobs:
           for file in style/*.css; do
             name=$(basename "$file")
             [ "$name" = "impact.css" ] && continue
-            cleancss -o "style/${name%.css}.min.css" "$file"
+            cleancss \
+              --skip-import \
+              -o "style/${name%.css}.min.css" \
+              "$file"
           done
 
       - name: Commit minified files
