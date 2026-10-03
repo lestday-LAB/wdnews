@@ -279,7 +279,7 @@
 #page-content .featured-block h1::after {
   background-color: var(--p-theme-color);
   transform: translate(-0.5rem, 0rem);
-  content: 'SCP SEMIMONTH ';
+  content: 'WDNEWS FEATURED ';
   font-size: var(--p-font-size-xsmall);
   text-align: right;
   font-weight: lighter;
